@@ -218,7 +218,7 @@ function App() {
                     
                     <p className="letter-paragraph">
                       Your smile brightens my darkest days, your laugh is my favorite melody, and your presence 
-                      is my greatest comfort. You make the ordinary extraordinary, and the impossible feel possible.
+                      is my greatest comfort. You are beautiful everyday. Berry Pretty Na...
                     </p>
                     
                     <p className="letter-paragraph">
