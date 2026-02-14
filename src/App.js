@@ -27,7 +27,8 @@ function App() {
       setCurrentPhotoIndex((prev) => (prev + 1) % photos.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [photos.length]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Handle "No" button hover - it moves away!
   const handleNoHover = () => {
