@@ -27,7 +27,7 @@ function App() {
       setCurrentPhotoIndex((prev) => (prev + 1) % photos.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [photos.length]);
 
   // Handle "No" button hover - it moves away!
   const handleNoHover = () => {
@@ -66,19 +66,19 @@ function App() {
   //         └── photo8.jpg
   
   const photos = [
-    { url: '/photos/photo1.jpg', caption: 'First time selfie together' },
-    { url: '/photos/photo2.jpg', caption: 'Ngr nae tuu tuu yite chin dl so p lr yite tr' },
-    { url: '/photos/photo3.jpg', caption: 'Thu a tan twr htie tat tr' },
-    { url: '/photos/photo4.jpg', caption: 'Last photo of being friends' },
-    { url: '/photos/photo5.jpg', caption: 'Chit sayar lay' },
-    { url: '/photos/photo6.jpg', caption: 'Churos wal p yee pya nay dr' },
-    { url: '/photos/photo7.jpg', caption: 'Puchifa ka kalay lay' },
-    { url: '/photos/photo8.jpg', caption: 'THE MIGHT LYDIA WITH FLOWERS' },
+    { url: '/photos/photo1.jpg', caption: 'Teaching you to swim ❤️' },
+    { url: '/photos/photo2.jpg', caption: 'Study sessions together 📚' },
+    { url: '/photos/photo3.jpg', caption: 'From friends to lovers 💕' },
+    { url: '/photos/photo4.jpg', caption: 'Our beautiful adventures ✨' },
+    { url: '/photos/photo5.jpg', caption: 'Making memories together 🌟' },
+    { url: '/photos/photo6.jpg', caption: 'You and me always 💗' },
+    { url: '/photos/photo7.jpg', caption: 'Best moments with you 🥰' },
+    { url: '/photos/photo8.jpg', caption: 'Forever my favorite person 💖' },
   ];
 
   const reasons = [
-    "A Yan Chit Poh Kgg dl",
-    "The way you eat everything I cook",
+    "Your smile lights up my entire world",
+    "The way you laugh at my terrible jokes",
     "How you make every day feel special",
     "Your kindness and beautiful heart",
     "The way you understand me without words",
@@ -184,10 +184,8 @@ function App() {
                 
                 <div className="quote-box">
                   <p className="quote-text">
-                    "Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always hopes, always perseveres. Love never fails."
-                  </p>
-                  <p className="quote-text">
-                    1 Corinthians 13:4-8
+                    "In your eyes, I have found my home. In your heart, I have found my love. 
+                    In your soul, I have found my mate."
                   </p>
                 </div>
 
@@ -218,7 +216,7 @@ function App() {
                     
                     <p className="letter-paragraph">
                       Your smile brightens my darkest days, your laugh is my favorite melody, and your presence 
-                      is my greatest comfort. You are beautiful everyday. Berry Pretty Na...
+                      is my greatest comfort. You make the ordinary extraordinary, and the impossible feel possible.
                     </p>
                     
                     <p className="letter-paragraph">
@@ -229,9 +227,10 @@ function App() {
                     
                     <p className="letter-paragraph">
                       We started as friends, and I still can't believe how lucky I am that we became lovers. 
-                      The fact that we built our relationship on friendship makes it even more special and real. 
-                      I love the way you understand me without words, how you inspires me, and how you make me 
-                      want to be a better person every single day.
+                      You were my best friend first, and now you're my everything. The fact that we built our 
+                      relationship on friendship makes it even more special and real. I love the way you understand 
+                      me without words, how you support my dreams, and how you make me want to be a better person 
+                      every single day.
                     </p>
                     
                     <p className="reasons-title">Here's why I love you...</p>
@@ -254,8 +253,8 @@ function App() {
                     </p>
                     
                     <p className="letter-signature">
-                      Yours,<br/>
-                      <span className="heart-emoji">Pookie ❤️</span>
+                      Forever yours,<br/>
+                      <span className="heart-emoji">❤️</span>
                     </p>
                   </div>
                 </div>
@@ -316,10 +315,24 @@ function App() {
                 <div className="photo-counter">
                   <p>{currentPhotoIndex + 1} / {photos.length}</p>
                 </div>
+
+                <div className="photo-note">
+                  <p>
+                    💡 <strong>Your photos are stored locally!</strong><br/>
+                    They're in: <code>public/photos/</code> folder<br/>
+                    Named: photo1.jpg, photo2.jpg, photo3.jpg... photo8.jpg
+                  </p>
+                </div>
               </div>
             </div>
           )}
 
+          {/* Footer */}
+          <div className="footer">
+            <p>
+              Made with <Heart className="footer-heart" fill="currentColor" /> on Valentine's Day 2026
+            </p>
+          </div>
         </>
       )}
     </div>
