@@ -219,12 +219,13 @@ function App() {
                     
                     <p className="letter-paragraph">
                       Your smile brightens my darkest days, your laugh is my favorite melody, and your presence 
-                      is my greatest comfort. You are beautiful everyday. Berry Pretty Na...
+                      is my greatest comfort. You make the ordinary extraordinary, and the impossible feel possible.
                     </p>
                     
                     <p className="letter-paragraph">
                       I cherish every single moment we spend together. Teaching you how to swim and watching your 
-                      confidence grow in the water. Every shared laugh, every quiet moment, every adventure they all mean the world to me.
+                      confidence grow in the water. Our late-night study sessions where we motivate each other to 
+                      keep going. Every shared laugh, every quiet moment, every adventure - they all mean the world to me.
                     </p>
                     
                     <p className="letter-paragraph">
@@ -320,6 +321,12 @@ function App() {
             </div>
           )}
 
+          {/* Start Over Button at Bottom */}
+          <div className="footer-container">
+            <button onClick={() => setHasAccepted(false)} className="start-over-button">
+              ↻ Start Over
+            </button>
+          </div>
         </>
       )}
     </div>
